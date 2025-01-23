@@ -16,10 +16,10 @@ namespace StopWatch
 
         static void Menu()
         {
+            Console.Clear();
             Console.WriteLine("Escolha uma opção: ");
             Console.WriteLine("S = Segndos 10s => 10 segundos");
             Console.WriteLine("m = Minutos 1m => 1 minuto");
-            Console.WriteLine("0 = Sair");
             string data = Console.ReadLine().ToLower();
             char type = char.Parse(data.Substring(data.Length - 1, 1));
 
@@ -29,12 +29,11 @@ namespace StopWatch
             if (type == 'm')
                 time *= 60;
 
-            if (time == 0)
-                Environment.Exit(0);
+
 
             Console.WriteLine("---------------------------");
             Console.WriteLine("Agora Escolha uma opção: ");
-            Console.WriteLine("1 - Descendente");
+            Console.WriteLine("1 - Decrescente");
             Console.WriteLine("2 - Crescente");
             Console.WriteLine("3 - Sair");
 
